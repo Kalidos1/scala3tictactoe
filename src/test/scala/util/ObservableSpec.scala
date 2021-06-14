@@ -1,4 +1,4 @@
-package util
+/*package util
 
 import java.security.KeyStore.TrustedCertificateEntry
 
@@ -29,3 +29,5 @@ class ObservableSpec extends WordSpec with Matchers {
   }
 
 }
+
+ */

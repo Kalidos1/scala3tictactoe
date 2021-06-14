@@ -1,4 +1,4 @@
-package model
+/*package model
 
 import org.scalatest.{Matchers, WordSpec}
 
@@ -46,3 +46,5 @@ class GameSpec extends WordSpec with Matchers {
   }
 
 }
+
+ */

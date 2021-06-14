@@ -1,3 +1,4 @@
+/*
 package model
 
 import model.{Game, Player}
@@ -18,3 +19,4 @@ class PlayerSpec extends WordSpec with Matchers {
   }}
 
 }
+ */

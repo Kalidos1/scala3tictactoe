@@ -62,7 +62,7 @@ class Controller(var game: Game,
       this.myTurn = !this.myTurn
       this.statusMessage = Messages.CELL_IS_SET
     else 
-      undoManager.doStep(new SetCommand(row, column, grid, playerIndex, this))
+      undoManager.doStep(SetCommand(row, column, grid, playerIndex, this))
       this.statusMessage = Messages.playerMoveToString(game.players(playerIndex).name, row, column, grid) + getNextPlayer(playerIndex) + Messages.NEXT
     notifyObservers
     true

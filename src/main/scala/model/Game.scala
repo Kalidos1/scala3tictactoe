@@ -2,7 +2,7 @@ package model
 
 case class Game(grids: Vector[Grid], players: Vector[Player]):
   def this(player1: Player, player2: Player) = {
-    this(Vector.tabulate(4){ _ => new Grid()}, Vector(player1, player2))
+    this(Vector.tabulate(4){ ? => new Grid()}, Vector(player1, player2))
     // players = Vector(Player(player1, "O"), Player(player2, "X"))
   }
   def this(player1: String, player2: String, symbol1: String, symbol2: String) = {

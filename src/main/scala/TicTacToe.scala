@@ -8,10 +8,10 @@ import view.gui.TicTacToeGUI
 import scala.io.StdIn.readLine
 
 object TicTacToe:
-  var controller = new Controller(new Game())
+  var controller = Controller(new Game())
 
-  val tui = new Tui(controller)
-  val gui = new TicTacToeGUI(controller)
+  val tui = Tui(controller)
+  val gui = TicTacToeGUI(controller)
   controller.notifyObservers
 
   def main(args: Array[String]): Unit = {

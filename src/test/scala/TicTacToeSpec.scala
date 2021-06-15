@@ -1,3 +1,5 @@
+package ticTacToe
+
 import org.scalatest._
 import matchers.should._
 import wordspec._

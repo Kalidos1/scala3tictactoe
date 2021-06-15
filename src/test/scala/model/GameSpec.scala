@@ -1,8 +1,10 @@
-/*package model
+package model
 
-import org.scalatest.{Matchers, WordSpec}
+import org.scalatest._
+import matchers.should._
+import wordspec._
 
-class GameSpec extends WordSpec with Matchers {
+class GameSpec extends AnyWordSpec with Matchers {
 
   "A Game" when {
     "not set to any value " should {
@@ -39,12 +41,10 @@ class GameSpec extends WordSpec with Matchers {
       }
       "sell is set" in {
         val newGame = game.set(1, 1, 1, 1)
-        newGame.sellIsSet(1, 1, 1) should be(true)
-        game.sellIsSet(1, 1, 1) should be(false)
+        newGame.cellIsSet(1, 1, 1) should be(true)
+        game.cellIsSet(1, 1, 1) should be(false)
       }
     }
   }
 
 }
-
- */

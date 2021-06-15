@@ -1,8 +1,10 @@
-/*package model
+package model
 
 import org.scalatest._
+import matchers.should._
+import wordspec._
 
-class CellSpec extends WordSpec with Matchers {
+class CellSpec extends AnyWordSpec with Matchers {
 
   "A Cell" when {
     "not set to any value " should {
@@ -32,5 +34,3 @@ class CellSpec extends WordSpec with Matchers {
   }
 
 }
-
- */

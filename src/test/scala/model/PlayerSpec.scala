@@ -1,10 +1,11 @@
-/*
 package model
 
 import model.{Game, Player}
 import org.scalatest._
+import matchers.should._
+import wordspec._
 
-class PlayerSpec extends WordSpec with Matchers {
+class PlayerSpec extends AnyWordSpec with Matchers {
   "A Player" when { "new" should {
     val player = Player("Your Name", "X")
     "have a name"  in {
@@ -19,4 +20,3 @@ class PlayerSpec extends WordSpec with Matchers {
   }}
 
 }
- */

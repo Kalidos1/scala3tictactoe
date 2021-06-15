@@ -1,9 +1,10 @@
-/*
 package model
 
-import org.scalatest.{Matchers, WordSpec}
+import org.scalatest._
+import matchers.should._
+import wordspec._
 
-class GridSpec extends WordSpec with Matchers {
+class GridSpec extends AnyWordSpec with Matchers {
   "A Grid is the playingfield of TicTacToe. A Grid" when {
     "to be constructed" should {
       "be created with the length of its edges as size 4" in {
@@ -22,5 +23,3 @@ class GridSpec extends WordSpec with Matchers {
   }
 
 }
-
- */

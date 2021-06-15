@@ -1,7 +1,5 @@
 package model
 
-import scala.math.sqrt
-
 case class Grid(private val cells: Vector[Vector[Cell]]) {
   def this() = this(Vector.tabulate(4, 4) { (row, col) => new Cell() })
 

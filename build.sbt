@@ -7,7 +7,8 @@ lazy val root = project
     name := "scala3-cross",
     version := "0.1.0",
 
-    libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.9",
+    libraryDependencies += "org.scalactic" %% "scalactic" % "3.2.9",
+    libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.9" % "test",
 
     // To make the default compiler and REPL use Dotty
     scalaVersion := scala3Version,

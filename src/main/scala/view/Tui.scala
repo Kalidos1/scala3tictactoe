@@ -4,7 +4,7 @@ import controller.Controller
 import util.Observer
 
 
-class Tui(controller: Controller) extends Observer {
+class Tui(controller: Controller) extends Observer:
 
   controller.add(this)
 
@@ -23,14 +23,12 @@ class Tui(controller: Controller) extends Observer {
     true
   }
   def checkIfPlayers (input: String): Boolean = {
-    if (input.contains("-")){
+    if input.contains("-") then
       val names: Array[String] = input.split("-")
-      if(names.length == 2 ){
+      if names.length == 2 then
         controller.setPlayers(names(0), names(1))
-      } else {
+      else
         return false
-      }
-    }
     true
   }
   def checkIfMove (input: String): Boolean = {
@@ -45,4 +43,3 @@ class Tui(controller: Controller) extends Observer {
     println(controller.statusMessage)
     true
   }
-}

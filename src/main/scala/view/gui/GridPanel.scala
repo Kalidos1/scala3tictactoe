@@ -8,7 +8,7 @@ import javafx.scene.transform.Rotate
 import javafx.scene.paint.Color
 
 
-class GridPanel(size: Double, shade: Double, id: Int, controller: Controller) extends Group {
+class GridPanel(size: Double, shade: Double, id: Int, controller: Controller) extends Group:
 
   private val color = Color.rgb(237, 255, 250)
   val rx = new Rotate(0, Rotate.X_AXIS)
@@ -53,4 +53,3 @@ class GridPanel(size: Double, shade: Double, id: Int, controller: Controller) ex
       col += 0.2
     })
   })
-}

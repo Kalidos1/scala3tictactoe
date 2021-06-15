@@ -1,5 +1,4 @@
 package model
 
-class OneDGridsStateStrategyFactory {
+class OneDGridsStateStrategyFactory:
   def getInstance(): WinStateStrategyTemplate = OneDGridsStateStrategy()
-}

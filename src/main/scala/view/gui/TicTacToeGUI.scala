@@ -6,7 +6,7 @@ import controller.{Controller, Messages}
 import javafx.application.Application
 import javax.swing._
 
-class TicTacToeGUI(controller: Controller) extends JFrame {
+class TicTacToeGUI(controller: Controller) extends JFrame:
   setTitle(Messages.TITLE)
   setLocationRelativeTo(null)
 
@@ -52,4 +52,3 @@ class TicTacToeGUI(controller: Controller) extends JFrame {
   }
 
   constructTicTacToePane(controller)
-}

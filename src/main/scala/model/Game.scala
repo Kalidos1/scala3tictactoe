@@ -1,6 +1,6 @@
 package model
 
-case class Game(grids: Vector[Grid], players: Vector[Player]) {
+case class Game(grids: Vector[Grid], players: Vector[Player]):
   def this(player1: Player, player2: Player) = {
     this(Vector.tabulate(4){ _ => new Grid()}, Vector(player1, player2))
     // players = Vector(Player(player1, "O"), Player(player2, "X"))
@@ -22,11 +22,9 @@ case class Game(grids: Vector[Grid], players: Vector[Player]) {
 
   def customToString: String = {
     var res = ""
-    for {
+    for 
       i <- grids.indices
-    } {
+    do
       res += grids(i).customToString(i)
-    }
     res
   }
-}

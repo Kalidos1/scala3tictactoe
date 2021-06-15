@@ -1,5 +1,4 @@
 package model
 
-class FourDGridsStateStrategyFactory {
+class FourDGridsStateStrategyFactory:
   def getInstance(): WinStateStrategyTemplate = FourDGridsStateStrategy()
-}

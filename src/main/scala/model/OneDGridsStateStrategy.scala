@@ -3,7 +3,7 @@ package model
 class OneDGridsStateStrategy(var rowGridScore: List[Array[Int]],
                              var colsGridScore: List[Array[Int]],
                              var diagGridScore: List[Array[Int]])
-  extends WinStateStrategyTemplate {
+  extends WinStateStrategyTemplate:
 
   def this() = {
     this(List.fill(4)(Array(0, 0, 0, 0)),
@@ -21,20 +21,18 @@ class OneDGridsStateStrategy(var rowGridScore: List[Array[Int]],
   }
 
   def checkCellInOtherSideOfDiagOneGrid(row: Int, column: Int, grid: Int): Boolean = {
-    for (i <- 0 to numberToWin) {
-      if (row == i && column == (numberToWin - 1 - i)) {
+    for 
+      i <- 0 to numberToWin
+    do
+      if row == i && column == (numberToWin - 1 - i) then
         this.diagGridScore(grid)(1) += 1
         return this.diagGridScore(grid)(1) == numberToWin
-      }
-    }
     false
   }
 
   override def checkDiagonal(row: Int, column: Int, grid: Int): Boolean = {
-    if (row == column) {
+    if row == column then
       this.diagGridScore(grid)(0) += 1
       return this.diagGridScore(grid)(0) == numberToWin
-    }
     checkCellInOtherSideOfDiagOneGrid(row, column, grid)
   }
-}

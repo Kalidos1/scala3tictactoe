@@ -4,7 +4,7 @@ import scalafx.scene.Group
 import scalafx.scene.transform.{Rotate, Scale, Translate}
 
 
-class Cam extends Group {
+class Cam extends Group:
 
   val t: Translate = new Translate()
   val p: Translate = new Translate()
@@ -20,5 +20,3 @@ class Cam extends Group {
     rz.setAxis(Rotate.ZAxis)
     this.transforms.addAll(t, p, rx, rz, ry, s, ip)
   }
-
-}

@@ -1,6 +1,6 @@
 package model
 
-case class Grid(private val cells: Vector[Vector[Cell]]) {
+case class Grid(cells: Vector[Vector[Cell]]):
   def this() = this(Vector.tabulate(4, 4) { (row, col) => new Cell() })
 
   val size: Int = cells.size
@@ -13,15 +13,16 @@ case class Grid(private val cells: Vector[Vector[Cell]]) {
 
   def spacing(size: Int): String = {
     var res = " "
-    for (i <- 0 to size) res += " "
+    for i <- 0 to size do res += " "
     res
   }
 
   def addCellToString(row: Int): String = {
     var str = spacing(row) + " \\"
-    for {
+    for 
       col <- 0 until cells(row).length
-    } str += "   " + cell(row, col).toString + "   \\"
+    do
+      str += "   " + cell(row, col).toString + "   \\"
     str
   }
 
@@ -34,23 +35,19 @@ case class Grid(private val cells: Vector[Vector[Cell]]) {
 
   def addExplanationCellToString(row: Int, grid: Int): String = {
     var res = " \\"
-    for {
-      column <- 0 until cells(row).length
-    } {
+    for 
+      column <- 0 until cells(row).length 
+    do
       res += "  " + row + column + grid + "  \\"
-
-    }
     res += newLine(row + 1)
     res
   }
 
   def customToString(grid: Int): String = {
     var res = newLine(0)
-    for {
-      row <- 0 until cells.length
-    } {
+    for 
+      row <- 0 until cells.length 
+    do
       res += addCellToString(row) + addExplanationCellToString(row, grid)
-    }
     res
   }
-}

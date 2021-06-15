@@ -4,7 +4,7 @@ import scalafx.scene.control.Label
 import javafx.scene.paint.Color
 
 
-class StatusPanel extends Group{
+class StatusPanel extends Group:
   val statusLabel: Label = new Label("");
   def init() = {
     getChildren.add(statusLabel)
@@ -14,4 +14,3 @@ class StatusPanel extends Group{
     statusLabel.setTextFill(Color.web("#ffffff"))
   }
   def clear = statusLabel.setText("");
-}

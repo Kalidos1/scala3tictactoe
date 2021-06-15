@@ -13,7 +13,7 @@ import javafx.scene.paint.{Color, CycleMethod, RadialGradient, Stop}
 import javafx.scene.transform.Shear
 import javafx.scene.input._
 
-class GameGui() extends Application with Observer {
+class GameGui() extends Application with Observer:
   var stage: Stage = null
   var appGroup: Group = new Group()
   var statusPanel: StatusPanel = new StatusPanel
@@ -157,4 +157,3 @@ class GameGui() extends Application with Observer {
     })
     true
   }
-}

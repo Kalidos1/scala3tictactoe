@@ -6,7 +6,7 @@ import javafx.scene.paint.Color
 import javafx.scene.transform.Rotate
 
 
-class CellPanel(cell: Cell,row: Int, column: Int, d: Double,grid: Int,e: Double, f: Double,  color:Color) extends Rectangle {
+class CellPanel(cell: Cell,row: Int, column: Int, d: Double,grid: Int,e: Double, f: Double,  color:Color) extends Rectangle:
 
   setWidth(d)
   setHeight(d)
@@ -20,8 +20,8 @@ class CellPanel(cell: Cell,row: Int, column: Int, d: Double,grid: Int,e: Double,
   setValue(cell)
 
   def setValue(cell: Cell): Unit = {
-    if ("X" == cell.value) this.setFill(Color.RED)
-    else if ("O" == cell.value) this.setFill(Color.BLUE)
+    if "X" == cell.value then this.setFill(Color.RED)
+    else if "O" == cell.value then this.setFill(Color.BLUE)
   }
 
 
@@ -30,4 +30,3 @@ class CellPanel(cell: Cell,row: Int, column: Int, d: Double,grid: Int,e: Double,
   def resetCell(color: Color): Unit = {
     this.setFill(color)
   }
-}

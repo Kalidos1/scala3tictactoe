@@ -36,7 +36,7 @@ class Controller(var game: Game,
   }
 
   def setValue(row: Int, column: Int, grid: Int): Boolean = {
-    if game.players.contains(null) || "".equals(game.players(0).name) then
+    if game.players.contains(null) || "" == game.players(0).name then
       statusMessage = Messages.ERROR_GIVE_PLAYERS_START
       notifyObservers
       return false
@@ -83,7 +83,7 @@ class Controller(var game: Game,
   }
 
   def reset: Boolean = {
-    if game.players.contains(null) || "".equals(game.players(0).name) then
+    if game.players.contains(null) || "" == game.players(0).name then
       this.statusMessage = Messages.ERROR_GIVE_PLAYERS_RESET
     else 
       game = new Game(game.players(0).name, game.players(1).name, "X", "O")
@@ -96,7 +96,7 @@ class Controller(var game: Game,
     true
   }
   def setPlayers (player1: String, player2: String): Boolean = {
-    if "".equals(player1) || "".equals(player2) then
+    if "" == player1 || "" == player2 then
       this.statusMessage = Messages.PLAYER_NAME
       notifyObservers
     else

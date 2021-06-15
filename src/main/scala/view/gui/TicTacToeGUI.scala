@@ -26,15 +26,13 @@ class TicTacToeGUI(controller: Controller) extends JFrame:
     val player2 = new JTextField
     start.addActionListener((e: _root_.java.awt.event.ActionEvent) => {
       val source: Object = e.getSource
-      if (source == start) {
-        if (!"".equals(player1.getText().trim()) && !"".equals(player2.getText().trim())) {
+      if source == start then
+        if "" != player1.getText().trim() && "" != player2.getText().trim() then
           controller.setPlayers(player1.getText(), player2.getText())
           this.dispose()
           Application.launch(classOf[GameGui])
-        } else {
+        else
           JOptionPane.showMessageDialog(null, Messages.USER_ERROR)
-        }
-      }
     })
     val info = new JLabel("<html><div WIDTH=285>" + controller.statusMessage + "</div></html>")
     val panel = new JPanel
